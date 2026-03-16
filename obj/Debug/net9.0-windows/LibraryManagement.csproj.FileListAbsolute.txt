@@ -1,0 +1,11 @@
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\MainWindow.baml
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\Views\AddEditBookWindow.baml
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\MainWindow.g.cs
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\Views\AddEditBookWindow.g.cs
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\App.g.cs
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\LibraryManagement_MarkupCompile.cache
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\LibraryManagement.g.resources
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\LibraryManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\LibraryManagement.AssemblyInfoInputs.cache
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\LibraryManagement.AssemblyInfo.cs
+C:\Users\sossu\pcsm\LibraryManagement\obj\Debug\net9.0-windows\LibraryManagement.csproj.CoreCompileInputs.cache
