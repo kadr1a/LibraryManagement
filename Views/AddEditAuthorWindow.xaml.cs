@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Windows;
 using LibraryManagement.Models;
 using LibraryManagement.Data;
@@ -30,6 +31,14 @@ namespace LibraryManagement.Views
             CountryTextBox.Text = Author.Country ?? string.Empty;
         }
 
+        private bool IsAuthorDuplicate(string firstName, string lastName, int currentAuthorId)
+        {
+            return _context.Authors.Any(a => 
+                a.FirstName == firstName && 
+                a.LastName == lastName && 
+                a.Id != currentAuthorId);
+        }
+
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(FirstNameTextBox.Text))
@@ -41,6 +50,12 @@ namespace LibraryManagement.Views
             if (string.IsNullOrWhiteSpace(LastNameTextBox.Text))
             {
                 MessageBox.Show("Введите фамилию автора");
+                return;
+            }
+
+            if (IsAuthorDuplicate(FirstNameTextBox.Text, LastNameTextBox.Text, Author.Id))
+            {
+                MessageBox.Show("Автор с таким именем и фамилией уже существует");
                 return;
             }
 
