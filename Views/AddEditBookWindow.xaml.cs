@@ -48,19 +48,30 @@ namespace LibraryManagement.Views
                 MessageBox.Show("Введите название книги");
                 return;
             }
-
+        
             if (AuthorComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Выберите автора");
                 return;
             }
-
+        
             if (GenreComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Выберите жанр");
                 return;
             }
-
+        
+            string isbn = ISBNTextBox.Text?.Trim();
+            if (!string.IsNullOrEmpty(isbn))
+            {
+                if (isbn.Length != 13 || !isbn.All(char.IsDigit))
+                {
+                    MessageBox.Show("ISBN должен содержать ровно 13 цифр", "Ошибка", 
+                                  MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+            }
+        
             Book.Title = TitleTextBox.Text;
             Book.Author = (Author)AuthorComboBox.SelectedItem;
             Book.AuthorId = Book.Author.Id;
@@ -74,7 +85,7 @@ namespace LibraryManagement.Views
             
             if (int.TryParse(QuantityTextBox.Text, out int quantity))
                 Book.QuantityInStock = quantity;
-
+        
             DialogResult = true;
             Close();
         }
